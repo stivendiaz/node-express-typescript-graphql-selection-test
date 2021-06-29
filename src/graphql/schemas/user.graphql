@@ -1,0 +1,16 @@
+type User {
+  id: String!
+  username: String!
+  name: String!
+  age: Int!
+}
+
+type Query {
+  getAll: [User]
+  filterBy(name: String, field: String, order: String): [User]
+}
+
+type Mutation {
+  signup(username: String!, name: String!, age: Int!): User
+  deleteUserById(userId: String!): User
+}
